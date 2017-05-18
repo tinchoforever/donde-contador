@@ -30,6 +30,7 @@ $(document).ready(function(){
 angular
   .module('dondeDataVizApp', [
     'ngRoute',
+    '720kb.socialshare',
     'angularMoment',
     'ui.odometer',
     'duScroll',

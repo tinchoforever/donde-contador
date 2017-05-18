@@ -13,7 +13,8 @@
     "angular-materialize": "^0.2.2",
     "moment": "^2.18.1",
     "angular-moment": "^1.0.1",
-    "angular-odometer-js": "^0.1.2"
+    "angular-odometer-js": "^0.1.2",
+    "angular-socialshare": "^1.4.5"
   },
   "appPath": "app",
   "moduleName": "donde-viz-evaluaciones"

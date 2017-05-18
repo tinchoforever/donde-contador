@@ -36,6 +36,7 @@ module.exports = function(config) {
       'bower_components/angular-moment/angular-moment.js',
       'bower_components/odometer/odometer.js',
       'bower_components/angular-odometer-js/dist/angular-odometer.js',
+      'bower_components/angular-socialshare/angular-socialshare.js',
       // endbower
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
