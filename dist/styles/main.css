@@ -1048,7 +1048,8 @@ a {
 }
 
 .container {
-  width: 100%;
+    width: 100%;
+    padding: 1em;
 }
 
 .container-90 {
@@ -1317,7 +1318,8 @@ main .map {
 @media screen and (min-width: 1000px) {
   main .map {
     padding-top: 0px;
-    width: 100%;
+    width: 50%;
+    max-width: 40%;
   }
   main .map div.container {
     width: 100%;
