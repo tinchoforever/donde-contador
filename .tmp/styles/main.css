@@ -639,7 +639,7 @@ select {
 
 @media screen and (max-height: 599px) and (min-width: 601px)  {
   .row .col.m6 {
-    width: 33%;
+    width: 50%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -1271,7 +1271,7 @@ main .view {
 }
 @media screen and (min-width: 1290px) {
   main .map {
-    /*left: 450px;*/
+    width: 100%;
     position: absolute;
   }
 }
@@ -1292,7 +1292,7 @@ main .map {
 @media screen and (min-width: 600px) {
   main .map {
     padding-top: 0px;
-    width: calc(100% - 350px);
+    width:100%;
   }
   main .map div.container {
     width: 100%;
@@ -1424,7 +1424,7 @@ div.row.highlight{
 }
 
 .region-detail {
-    margin-top: 5em;
+    margin-top: 1em;
     border: solid 2px;
     border-color:  #D3D3D3;
     padding: 2em;
@@ -1490,10 +1490,10 @@ path.st1.highlight {
     stroke-width: 1.6;
 }
 
-div.share{
-    padding: 1.9em;
+div.share {
+    padding: 1.5em;
+    padding-bottom: 2.2em;
 }
-
 
 .btn-floating.btn-large i {
     line-height: 56px;
