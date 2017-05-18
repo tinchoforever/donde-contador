@@ -30,6 +30,7 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
    		$interval(displayTime,1 * 1000);
 
    		var getStats = function(){
+              d3.selectAll('svg path.st1').attr("class", "st1 active");
              $http.get(server + 'api/v2/evaluacion/stats/argentina')
                .then(function(d){
                   $scope.stats = d.data;
@@ -41,7 +42,7 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
                      var prov = $scope.stats.placesCountArray[i];
                      if (prov.nombreProvincia){
                      var key = prov.nombreProvincia.trim().split(' ').join('_');
-                     prov.key = key;
+                     $scope.stats.placesCountArray[i].key = key;
                         d3.select('path#' + key)
                            .attr("class", "st1 active")
                            .style("fill-opacity",prov.porcentaje/100);
@@ -69,7 +70,8 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
 
                   $scope.active.total = $scope.active.countEvaluatedPlaces + $scope.active.countNotevaluatedPlaces;
                   $scope.share=false;
-
+                  d3.select('path#' + $scope.active.key)
+                     .attr("class", "st1 active highlight");
 
 
                });
@@ -80,12 +82,12 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
 	     
         getStats();
 
-        $scope.showShare = function(){
-         $scope.share= true;
+        $scope.play = function(){
+         $scope.started= true;
         }
-        $scope.closeShare = function(){
-         $scope.share= false;
-        }
+        
+         $scope.started= false;
+        
 
         $scope.setActive = function(k){
             for (var i = 0; i < $scope.stats.placesCountArray.length; i++) {
@@ -95,6 +97,9 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
                      $scope.active = p;
                      $scope.active.total = $scope.active.countEvaluatedPlaces + $scope.active.countNotevaluatedPlaces;
                      $scope.share=false;
+                       d3.select('path#' + k)
+                                     .attr("class", "st1 active highlight");
+                                 
                   });
                   break;
                }
