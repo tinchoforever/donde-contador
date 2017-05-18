@@ -1038,7 +1038,8 @@ a {
 }
 
 .container {
-  width: 100%;
+    width: 100%;
+    padding: 1em;
 }
 
 .container-90 {
@@ -1302,12 +1303,19 @@ main .map {
   main .map {
     padding-top: 0px;
     width: 100%;
+    max-width: 100%;
   }
   main .map div.container {
     width: 100%;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  main .map {
+    padding-top: 0px;
+    width: 45%;
+    max-width: 45%;
+  }
+}
 footer {
   background-color: #221E1F;
 }

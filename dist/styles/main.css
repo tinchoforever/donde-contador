@@ -1318,14 +1318,20 @@ main .map {
 @media screen and (min-width: 1000px) {
   main .map {
     padding-top: 0px;
-    width: 50%;
-    max-width: 40%;
+    width: 100%;
+    max-width: 100%;
   }
   main .map div.container {
     width: 100%;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  main .map {
+    padding-top: 0px;
+    width: 45%;
+    max-width: 45%;
+  }
+}
 footer {
   background-color: #221E1F;
 }
