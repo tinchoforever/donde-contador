@@ -10,7 +10,7 @@
 angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $interval, $scope,$timeout,$document,$http) {
 
 
-      var server = 'https://staging-donde.com.ar/';
+      var server = 'https://donde.huesped.org.ar/';
 
      
 
@@ -18,7 +18,7 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
 
 	   var displayTime = function(){
 
-   			$scope.diffDays = moment.utc([2017, 6, 18, 0, 0, 0, 0]);
+   			$scope.diffDays = moment.utc([2017, 7, 31, 0, 0, 0, 0]);
    			//Solo hoy
    			var m = moment().utcOffset(-60*1);
    			$scope.diffHours = moment.utc([2017, m.month(),m.date()+1, m.hour(), 59, 59, 0]);	
@@ -52,8 +52,11 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
                        (function(k){
                          d3.select('path#' + k)
                              .on('click', function(){
+                                  var anchor = document.querySelector( '#detail' );
+                                  smoothScroll.animateScroll( anchor );
                                  
                                  $scope.setActive(k);
+
                                  d3.selectAll('svg path.st1')
                                        .attr("class", "st1 active");
                                  d3.select('path#' + k)

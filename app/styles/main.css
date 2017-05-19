@@ -1520,3 +1520,9 @@ div.share {
     line-height: 56px;
     background: #e6334c;
 }
+.odometer.odometer-auto-theme, .odometer.odometer-theme-minimal{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-bottom: 4px;
+  }
