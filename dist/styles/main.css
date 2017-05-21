@@ -1,3 +1,4 @@
+
 main img.logoTop {
     height: 50px;
     vertical-align: middle;
@@ -906,7 +907,7 @@ main .rapido {
     margin: 100%;
 }
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Playfair Display', serif !important;
   color: #221E1F;
 }
 
@@ -1048,7 +1049,8 @@ a {
 }
 
 .container {
-  width: 100%;
+    width: 100%;
+    padding: 1em;
 }
 
 .container-90 {
@@ -1288,7 +1290,6 @@ main .view {
 @media screen and (min-width: 1290px) {
   main .map {
     width: 100%;
-    position: absolute;
   }
 }
 
@@ -1318,12 +1319,19 @@ main .map {
   main .map {
     padding-top: 0px;
     width: 100%;
+    max-width: 100%;
   }
   main .map div.container {
     width: 100%;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  main .map {
+    padding-top: 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
 footer {
   background-color: #221E1F;
 }

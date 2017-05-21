@@ -23,7 +23,8 @@
 				<div class="col s1">
 					<i class="fa fa-flag-checkered" aria-hidden="true"></i>
 				</div>
-						<div class="col s11" >
+
+						<div class="col s11 wow fadeIn" ng-show="started">
 						<h5>  Quedan <span class="red" ng-show="diffDays" ng-cloak>
 							
 							{{diffDays | amDifference : null : 'days' }}  días, 
