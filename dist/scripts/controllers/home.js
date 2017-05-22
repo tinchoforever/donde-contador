@@ -10,10 +10,15 @@
 angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $interval, $scope,$timeout,$document,$http) {
 
 
-      var server = 'https://donde.huesped.org.ar/';
+      var server = 'https://staging-donde.com.ar/';
 
      
+      $scope.active = {
+        countEvaluatedPlaces: 0,
+        countNotevaluatedPlaces:0,
+        nombreProvincia: '',
 
+      }
 
 
 	   var displayTime = function(){
@@ -60,7 +65,7 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
                                  d3.selectAll('svg path.st1')
                                        .attr("class", "st1 active");
                                  d3.select('path#' + k)
-                                     .attr("class", "st1 active highlight");
+                                     .attr("class", "st1 ` highlight");
                                  });
 
                        })(key);
@@ -70,13 +75,13 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
 
                   var current = Math.floor(Math.random() * $scope.provincias.length -1) + 0 ;
                   $scope.active = $scope.stats.placesCountArray[current];
+                  if ($scope.active){
+                    $scope.active.total = $scope.active.countEvaluatedPlaces + $scope.active.countNotevaluatedPlaces;
+                    $scope.share=false;
+                    d3.select('path#' + $scope.active.key)
+                       .attr("class", "st1 active highlight");
 
-                  $scope.active.total = $scope.active.countEvaluatedPlaces + $scope.active.countNotevaluatedPlaces;
-                  $scope.share=false;
-                  d3.select('path#' + $scope.active.key)
-                     .attr("class", "st1 active highlight");
-
-
+                   }
                });
    			
    			
@@ -98,11 +103,12 @@ angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $inte
                if (p.key === k){
                   $scope.$apply(function(){
                      $scope.active = p;
+                     if ($scope.active){
                      $scope.active.total = $scope.active.countEvaluatedPlaces + $scope.active.countNotevaluatedPlaces;
                      $scope.share=false;
                        d3.select('path#' + k)
                                      .attr("class", "st1 active highlight");
-                                 
+                            }    
                   });
                   break;
                }

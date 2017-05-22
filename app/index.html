@@ -1,25 +1,26 @@
+
 <!doctype html>
 <html>
   <head>
-    <title>donde.huesped.org.ar | Fundación Huésped</title>
+    <title>donde.huesped.org.ar | FundaciÃ³n HuÃ©sped</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no" />
-    <meta charset="utf-8">
+ 
     <meta name="google-site-verification" content="RQh3eES_sArPYfFybCM87HsV6mbwmttWlAIk-Upf1EQ" />
-    <meta name="description" content="Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos.">
-    <meta name="author" content="Fundación Huésped">
+    <meta name="description" content="ConocÃ© dÃ³nde hacerte el test de VIH o dÃ³nde conseguir preservativos gratuitos.">
+    <meta name="author" content="FundaciÃ³n HuÃ©sped">
     <link rel="canonical" href="https://www.huesped.org.ar/donde/"/>
     <meta property='og:locale' content='es_LA'/>
-    <meta property='og:title' content='donde.huesped.org.ar | Fundación Huésped'/>
-    <meta property="og:description" content="Conoce dónde hacerte la prueba de VIH y buscar condones gratis. También encuentra los vacunatorios y centros de infectología más cercanos." />
+    <meta property='og:title' content='donde.huesped.org.ar | FundaciÃ³n HuÃ©sped'/>
+    <meta property="og:description" content="Conoce dÃ³nde hacerte la prueba de VIH y buscar condones gratis. TambiÃ©n encuentra los vacunatorios y centros de infectologÃ­a mÃ¡s cercanos." />
     <meta property='og:url' content='https://www.huesped.org.ar/donde/'/>
-    <meta property='og:site_name' content='Fundación Huésped'/>
+    <meta property='og:site_name' content='FundaciÃ³n HuÃ©sped'/>
     <meta property='og:type' content='website'/>
     <meta property='og:image' content='https://www.huesped.org.ar/donde/img/icon/apple-touch-icon-152x152.png'/>
     <meta property='fb:app_id' content='459717130793708' />
     <meta name="twitter:card" content="summary">
-    <meta name='twitter:title' content='donde.huesped.org.ar | Fundación Huésped'/>
-    <meta name="twitter:description" content="Conocé dónde hacerte el test de VIH o dónde conseguir preservativos gratuitos." />
+    <meta name='twitter:title' content='donde.huesped.org.ar | FundaciÃ³n HuÃ©sped'/>
+    <meta name="twitter:description" content="ConocÃ© dÃ³nde hacerte el test de VIH o dÃ³nde conseguir preservativos gratuitos." />
     <meta name='twitter:url' content='https://www.huesped.org.ar/donde/'/>
     <meta name='twitter:image' content='https://www.huesped.org.ar/donde/img/icon/apple-touch-icon-152x152.png'/>
     <meta name='twitter:site' content='@fundhuesped' />
@@ -30,7 +31,8 @@
     <link rel='stylesheet' href='bower_components/c3/c3.css' />
     <link rel='stylesheet' href='bower_components/materialize/bin/materialize.css' />
     <link rel='stylesheet' href='bower_components/angular-socialshare/angular-socialshare.css' />
-    <link rel='stylesheet' href='bower_components/wow.js/css/libs/animate.css' />
+    <link rel="stylesheet" href="bower_components/odometer/themes/odometer-theme-minimal.css"/>
+    <link rel="stylesheet" href="bower_components/wow.js/css/libs/animate.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -82,7 +84,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/pym.js/dist/pym.js"></script>
-    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/d3/d3.min.js"></script>
     <script src="bower_components/c3/c3.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/angular-scroll/angular-scroll.js"></script>
@@ -93,9 +95,7 @@
     <script src="bower_components/odometer/odometer.js"></script>
     <script src="bower_components/angular-odometer-js/dist/angular-odometer.js"></script>
     <script src="bower_components/angular-socialshare/angular-socialshare.js"></script>
-
-    <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
-
+    
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -104,7 +104,10 @@
     <script src="scripts/libs/genosha-d3-helpers.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/home.js"></script>
+    <script src="scripts/controllers/map.js"></script>
     <script src="scripts/directives/mapChart.js"></script>
+    <script src="scripts/directives/votes.js"></script>
+    <script src="scripts/directives/diversity.js"></script>
     <!-- endbuild -->
 </body>
 </html>
