@@ -10,7 +10,7 @@
 angular.module('dondeDataVizApp').controller('HomeCtrl', function (moment, $interval, $scope,$timeout,$document,$http) {
 
 
-      var server = 'https://staging-donde.com.ar/';
+      var server = 'https://donde.huesped.org.ar/';
 
      
       $scope.active = {
